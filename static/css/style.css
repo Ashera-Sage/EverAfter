@@ -284,7 +284,6 @@ footer{
 =========================== */
 
 @media(max-width:768px){
-
 .navbar{
 
     flex-direction:column;
@@ -292,35 +291,180 @@ footer{
     gap:15px;
 
 }
-
 .hero{
 
     padding:20px;
 
 }
-
 .hero-content{
 
     padding:35px;
 
 }
-
 .hero h1{
 
     font-size:60px;
 
 }
-
 .hero p{
 
     font-size:17px;
 
 }
-
 .flower{
 
     width:140px;
 
 }
+}
+/* ===========================
+      LOGIN PAGE
+=========================== */
+/* ==========================
+        LOGIN PAGE
+========================== */
+
+.login-container{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+.login-card{
+    width:430px;
+    background:#afc9db;
+    border:2px solid #070537;
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.login-card h1{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+    color:#070537;
+}
+.login-card h2{
+    margin-top:10px;
+    margin-bottom:35px;
+    color:#070537;
+    font-weight:500;
+}
+.login-card input{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border:2px solid #070537;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+.login-card button{
+    width:100%;
+    padding:14px;
+    background:#070537;
+    color:#afc9db;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+.login-card button:hover{
+    background:#0f0c63;
+}
+
+/* Flash Messages */
+
+.flash{
+
+    padding:12px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+}
+
+.flash.success{
+
+    background:#d4edda;
+
+    color:#155724;
+
+    border:1px solid #28a745;
+
+}
+
+.flash.error{
+
+    background:#f8d7da;
+
+    color:#721c24;
+
+    border:1px solid #dc3545;
+
+}
+
+/* ==========================
+        DASHBOARD
+========================== */
+
+.dashboard-container{
+
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+    text-align:center;
+
+}
+
+.dashboard-container h1{
+
+    color:#070537;
+    margin-bottom:15px;
+
+}
+
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+.dashboard-card{
+
+    background:#afc9db;
+    border:2px solid #070537;
+    border-radius:20px;
+    padding:30px;
+    transition:0.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+
+}
+
+.dashboard-card h2{
+
+    color:#070537;
+    margin-bottom:15px;
+
+}
+
+.dashboard-card p{
+
+    color:#333;
 
 }
