@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EverAfter | Wedding Planner & RSVP</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>EverAfter</h2>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/admin">Admin Login</a>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <!-- Floral Decorations -->
+        <img src="{{ url_for('static', filename='images/image1.png') }}" class="flower flower-left">
+
+        <img src="{{ url_for('static', filename='images/image1.png') }}" class="flower flower-right">
+
+        <div class="hero-content">
+
+            <h1>EverAfter</h1>
+
+            <p>
+                Every love story deserves a beautiful beginning.
+                Create weddings, manage guests, collect RSVPs and
+                celebrate unforgettable moments.
+            </p>
+
+            <a href="#upcoming" class="hero-btn">
+    Explore Weddings
+</a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= UPCOMING ================= -->
+
+    <section id="upcoming" class="section">
+
+        <h2>Upcoming Weddings</h2>
+
+        <div class="empty-box">
+
+            <h3>No Weddings Yet</h3>
+
+            <p>
+                Wedding cards will appear here after the Admin creates a wedding.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= COMPLETED ================= -->
+
+    <section class="section">
+
+        <h2>Completed Weddings</h2>
+
+        <div class="empty-box">
+
+            <h3>No Completed Weddings</h3>
+
+            <p>
+                Completed wedding events will appear here.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 EverAfter | Wedding Planner & RSVP Management System
+
+    </footer>
+
+</body>
+
+</html>
