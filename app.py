@@ -1,4 +1,5 @@
 from flask import Flask,render_template,request,redirect,url_for,session,flash
+import json
 
 app=Flask(__name__)
 app.secret_key="everafter_secret_key"
@@ -11,7 +12,7 @@ def home():
 def admin():
     return render_template("admin_login.html")
 
-@app.route("/admin_login",methods=["POST"])
+@app.route("/admin-login",methods=["POST"])
 def admin_login():
     username=request.form["username"]
     password=request.form["password"]
@@ -33,6 +34,38 @@ def logout():
     session.pop("admin",None)
     flash("Logged Out Successfully","success")
     return redirect("/admin")
+
+@app.route("/create-wedding",methods=["GET","POST"])
+def create_wedding():
+    if request.method=="POST":
+        groom=request.form["groom"]
+        bride=request.form["bride"]
+        date=request.form["date"]
+        time=request.form["time"]
+        venue=request.form["venue"]
+        place=request.form["place"]
+        guests=request.form["guests"]
+        description=request.form["description"]
+        wedding={
+            "groom":groom,
+            "bride":bride,
+            "date":date,
+            "time":time,
+            "venue":venue,
+            "place":place,
+            "guests":int(guests),
+            "description":description
+        }
+        with open("data/weddings.json","r") as file:
+            weddings=json.load(file)
+            weddings.append(wedding)
+        with open("data/weddings.json","w") as file:
+            json.dump(weddings,file,indent=4)
+        flash("Saved Successfully","success")
+        return redirect("/dashboard")
+
+    return render_template("create_wedding.html")
+
 
 if __name__=="__main__":
     app.run(debug=True)
