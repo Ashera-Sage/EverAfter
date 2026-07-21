@@ -540,3 +540,37 @@ footer{
     width: 70%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+
+.edit-btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #afc9db;
+    color: #070537;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-right: 8px;
+}
+
+.edit-btn:hover{
+    background-color: #070537;
+    color: #ffffff;
+}
+
+.delete-btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #d9534f;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.delete-btn:hover{
+    background-color: #b52b27;
+}

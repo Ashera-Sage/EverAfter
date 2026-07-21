@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing wedding</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="logo">
+        <h2>EverAfter</h2>
+    </div>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+    </nav>
+    <div class="create-container">
+    <div class="create-card">
+    <h2>Create New Wedding...</h2>
+    <form action="/edit/{{wedding.id}}" method="post">
+        <label>Groom's Name</label>
+        <input type="text" name="groom" value="{{wedding.groom}}" required><br><br>
+        <label>Bride's Name</label>
+        <input type="text" name="bride" value="{{wedding.bride}}" required><br><br>
+        <label>Wedding Date</label>
+        <input type="date" name="date" value="{{wedding.date}}" required><br><br>
+        <label>Wedding Time</label>
+        <input type="time" name="time" value="{{wedding.time}}" required><br><br>
+        <label>Venue</label>
+        <input type="text" name="venue" value="{{wedding.venue}}" required><br><br>
+        <label>Place</label>
+        <input type="text" name="place" value="{{wedding.place}}" required><br><br>
+        <label>Maximum Guests</label>
+        <input type="number" name="guests" min="1" value="{{wedding.guests}}" required><br><br>
+        <label>Description</label>
+        <textarea rows="4" name="description">{{wedding.description}}</textarea><br><br>
+        <button type="submit">Save</button>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

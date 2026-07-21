@@ -1,12 +1,28 @@
 from flask import Flask,render_template,request,redirect,url_for,session,flash
+from datetime import datetime,date
 import json
 
 app=Flask(__name__)
 app.secret_key="everafter_secret_key"
 
+from datetime import datetime, date
+
 @app.route("/")
 def home():
-    return render_template("index.html")
+
+    with open("data/weddings.json", "r") as file:
+        weddings = json.load(file)
+    upcoming = []
+    completed = []
+    today = date.today()
+    for wedding in weddings:
+        wedding_date = datetime.strptime(wedding["date"],"%Y-%m-%d").date()
+        if wedding_date >= today:
+            upcoming.append(wedding)
+        else:
+            completed.append(wedding)
+
+    return render_template("index.html",upcoming=upcoming,completed=completed)
 
 @app.route("/admin")
 def admin():
@@ -46,7 +62,17 @@ def create_wedding():
         place=request.form["place"]
         guests=request.form["guests"]
         description=request.form["description"]
+
+        with open("data/weddings.json","r") as file:   # reading existing weddings
+            weddings=json.load(file)
+
+        if weddings:                                # generate id
+            wedding_id=weddings[-1]["id"]+1         # last id + 1
+        else:         
+            wedding_id=1                            # if no items then id =1
+
         wedding={
+            "id":wedding_id,
             "groom":groom,
             "bride":bride,
             "date":date,
@@ -56,10 +82,10 @@ def create_wedding():
             "guests":int(guests),
             "description":description
         }
-        with open("data/weddings.json","r") as file:
-            weddings=json.load(file)
-            weddings.append(wedding)
-        with open("data/weddings.json","w") as file:
+
+        weddings.append(wedding)  # adding new wedding
+
+        with open("data/weddings.json","w") as file:  # saving to json file
             json.dump(weddings,file,indent=4)
         flash("Saved Successfully","success")
         return redirect("/dashboard")
@@ -71,6 +97,45 @@ def view_weddings():
     with open("data/weddings.json","r") as file:
         weddings=json.load(file)
     return render_template("view_weddings.html",weddings=weddings)
+
+@app.route("/edit/<int:id>", methods=["GET", "POST"])
+def edit_wedding(id):
+    with open("data/weddings.json", "r") as file:
+        weddings = json.load(file)
+    selected_wedding = None
+    for wedding in weddings:
+        if wedding["id"] == id:
+            selected_wedding = wedding
+            if request.method == "POST":
+                wedding["groom"] = request.form["groom"]
+                wedding["bride"] = request.form["bride"]
+                wedding["date"] = request.form["date"]
+                wedding["time"] = request.form["time"]
+                wedding["venue"] = request.form["venue"]
+                wedding["place"] = request.form["place"]
+                wedding["guests"] = int(request.form["guests"])
+                wedding["description"] = request.form["description"]
+            break
+    if request.method == "POST":
+        with open("data/weddings.json", "w") as file:
+            json.dump(weddings, file, indent=4)
+        flash("Wedding Updated Successfully!", "success")
+        return redirect("/view-weddings")
+
+    return render_template("edit.html", wedding=selected_wedding)
+
+@app.route("/delete/<int:id>")
+def delete_wedding(id):
+    with open("data/weddings.json", "r") as file:
+        weddings = json.load(file)
+    for wedding in weddings:
+        if wedding["id"] == id:
+            weddings.remove(wedding)
+            break
+    with open("data/weddings.json", "w") as file:
+        json.dump(weddings, file, indent=4)
+    flash("Wedding Deleted Successfully!", "success")
+    return redirect("/view-weddings")
 
 if __name__=="__main__":
     app.run(debug=True)

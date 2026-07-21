@@ -58,15 +58,35 @@
 
         <h2>Upcoming Weddings</h2>
 
-        <div class="empty-box">
+        {% if upcoming %}
+        <div class="card-container">
+            {% for wedding in upcoming %}
+    <div class="wedding-card">
+        <h3>{{ wedding.groom }} ❤️ {{ wedding.bride }}</h3>
 
-            <h3>No Weddings Yet</h3>
+        <p>{{ wedding.date }}</p>
 
-            <p>
-                Wedding cards will appear here after the Admin creates a wedding.
-            </p>
+        <a href="/invitation/{{ wedding.id }}" class="hero-btn">
+            View Invitation
+        </a>
 
-        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% else %}
+
+<div class="empty-box">
+
+    <h3>No Upcoming Weddings</h3>
+
+    <p>Wedding cards will appear here after the Admin creates a wedding.</p>
+
+</div>
+
+{% endif %}
 
     </section>
 
@@ -76,15 +96,39 @@
 
         <h2>Completed Weddings</h2>
 
-        <div class="empty-box">
+        <{% if completed %}
 
-            <h3>No Completed Weddings</h3>
+<div class="card-container">
 
-            <p>
-                Completed wedding events will appear here.
-            </p>
+    {% for wedding in completed %}
 
-        </div>
+    <div class="wedding-card">
+
+        <h3>{{ wedding.groom }} ❤️ {{ wedding.bride }}</h3>
+
+        <p>{{ wedding.date }}</p>
+
+        <a href="/invitation/{{ wedding.id }}" class="hero-btn">
+            View Invitation
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% else %}
+
+<div class="empty-box">
+
+    <h3>No Completed Weddings</h3>
+
+    <p>Completed wedding events will appear here.</p>
+
+</div>
+
+{% endif %}
 
     </section>
 

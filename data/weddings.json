@@ -1,19 +1,21 @@
 [
     {
+        "id": 1,
         "groom": "Alex",
         "bride": "Tisha",
-        "date": "2026-07-24",
-        "time": "12:30",
+        "date": "2026-07-28",
+        "time": "10:30",
         "venue": "Lulu Conventional Center",
         "place": "Kochi",
-        "guests": 500,
+        "guests": 600,
         "description": "Join us as we celebrate the beginning of a beautiful journey filled with love, laughter, and cherished memories. Your presence will make our special day even more meaningful..."
     },
     {
+        "id": 2,
         "groom": "Marcel",
         "bride": "Rebecca",
         "date": "2026-07-04",
-        "time": "16:30",
+        "time": "16:00",
         "venue": "St Antony's Church",
         "place": "Banglore",
         "guests": 200,

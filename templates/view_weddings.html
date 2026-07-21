@@ -34,6 +34,8 @@
     <p><strong>Place : </strong>{{wedding.place}}</p>
     <p><strong>Maximum Guests : </strong>{{wedding.guests}}</p>
     <p><strong>Description : </strong>{{wedding.description}}</p>
+    <a href="/edit/{{wedding.id}}" class="edit-btn" >Edit</a>
+    <a href="/delete/{{ wedding.id }}" class="delete-btn" onclick="return confirm('Are you sure you want to delete this wedding?')">Delete</a>
     </div>
 
     {% endfor %}
