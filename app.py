@@ -66,6 +66,11 @@ def create_wedding():
 
     return render_template("create_wedding.html")
 
+@app.route("/view-weddings")
+def view_weddings():
+    with open("data/weddings.json","r") as file:
+        weddings=json.load(file)
+    return render_template("view_weddings.html",weddings=weddings)
 
 if __name__=="__main__":
     app.run(debug=True)

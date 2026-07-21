@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewing the created weddings</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">
+        <h2>EverAfter</h2>
+    </div>
+    <div class="nav-links">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+    </nav>
+    
+    {% for wedding in weddings %}
+
+    <div class="wedding-card">
+    <h2>{{wedding.groom}}❤️{{wedding.bride}}</h2>
+    <p><strong>Date : </strong>{{wedding.date}}</p>
+    <p><strong>Time : </strong>{{wedding.time}}</p>
+    <p><strong>Venue : </strong>{{wedding.venue}}</p>
+    <p><strong>Place : </strong>{{wedding.place}}</p>
+    <p><strong>Maximum Guests : </strong>{{wedding.guests}}</p>
+    <p><strong>Description : </strong>{{wedding.description}}</p>
+    </div>
+
+    {% endfor %}
+</body>
+</html>

@@ -8,5 +8,15 @@
         "place": "Kochi",
         "guests": 500,
         "description": "Join us as we celebrate the beginning of a beautiful journey filled with love, laughter, and cherished memories. Your presence will make our special day even more meaningful..."
+    },
+    {
+        "groom": "Marcel",
+        "bride": "Rebecca",
+        "date": "2026-07-04",
+        "time": "16:30",
+        "venue": "St Antony's Church",
+        "place": "Banglore",
+        "guests": 200,
+        "description": "With joyful hearts, we invite you to be a part of our wedding celebration as we begin our new life together..."
     }
 ]

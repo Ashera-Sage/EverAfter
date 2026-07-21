@@ -530,3 +530,13 @@ footer{
     font-family:'Poppins',sans-serif;
     box-sizing:border-box;
 }
+
+.wedding-card{
+    background: #afc9db;
+    border: 2px solid #070537;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px auto;
+    width: 70%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
