@@ -574,3 +574,139 @@ footer{
 .delete-btn:hover{
     background-color: #b52b27;
 }
+
+/* Invitation Page */
+
+.invite-body{
+
+    background:#f8fbfd;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:40px;
+    
+
+}
+
+.invite-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:700px;
+
+    max-width:90%;
+
+    margin:50px auto;
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:70px 60px;
+
+    border:3px solid #afc9db;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    text-align:center;
+}
+
+.invite-card h4{
+
+    color:#070537;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+.invite-card h1{
+
+    font-family:'Great Vibes',cursive;
+
+    color:#070537;
+
+    font-size:65px;
+
+    margin:10px;
+
+}
+
+.invite-card span{
+
+    font-size:40px;
+
+    color:#afc9db;
+
+}
+
+.invite-text{
+
+    margin:30px 0;
+
+    font-size:18px;
+
+    color:#555;
+
+}
+
+.invite-card hr{
+
+    margin:30px 0;
+
+}
+
+.invite-card p{
+
+    margin:15px 0;
+
+    font-size:18px;
+
+}
+
+.description{
+
+    font-style:italic;
+
+    color:#666;
+
+    margin-top:25px;
+
+}
+.flower-top{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:250px;
+
+    z-index:1;
+
+    pointer-events:none;
+}
+.flower-bottom{
+
+    position:absolute;
+
+    bottom:0;
+
+    right:0;
+
+    width:240px;
+
+    z-index:1;
+
+    pointer-events:none;
+}

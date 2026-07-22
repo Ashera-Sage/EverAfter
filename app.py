@@ -137,5 +137,25 @@ def delete_wedding(id):
     flash("Wedding Deleted Successfully!", "success")
     return redirect("/view-weddings")
 
+@app.route("/invitation/<int:id>")
+def invitation(id):
+    with open("data/weddings.json", "r") as file:
+        weddings = json.load(file)
+
+    selected_wedding = None
+    for wedding in weddings:
+
+        if wedding["id"] == id:
+            selected_wedding = wedding
+            break
+
+    return render_template("invitation.html",wedding=selected_wedding)
+
+@app.route("/rsvp/<int:id>", methods=["GET","POST"])
+def rsvp(id):
+    if request.method == "POST":
+        return "Saved"
+    return render_template("rsvp.html", wedding_id=id)
+
 if __name__=="__main__":
     app.run(debug=True)
