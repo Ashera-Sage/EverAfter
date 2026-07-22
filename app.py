@@ -151,11 +151,77 @@ def invitation(id):
 
     return render_template("invitation.html",wedding=selected_wedding)
 
-@app.route("/rsvp/<int:id>", methods=["GET","POST"])
+@app.route("/rsvp/<int:id>", methods=["GET", "POST"])
 def rsvp(id):
+
+    with open("data/weddings.json", "r") as file:
+        weddings = json.load(file)
+
+    selected_wedding = None
+
+    for wedding in weddings:
+        if wedding["id"] == id:
+            selected_wedding = wedding
+            break
+
     if request.method == "POST":
-        return "Saved"
-    return render_template("rsvp.html", wedding_id=id)
+
+        name = request.form["name"]
+        email = request.form["email"]
+        phone = request.form["phone"]
+        status = request.form["status"]
+        bring_guest = request.form["bring_guest"]
+        guests = int(request.form["guests"])
+        message = request.form["message"]
+
+        with open("data/rsvps.json", "r") as file:
+            rsvps = json.load(file)
+
+        rsvp = {
+
+            "wedding_id": id,
+            "name": name,
+            "email": email,
+            "phone": phone,
+            "status": status,
+            "bring_guest": bring_guest,
+            "guests": guests,
+            "message": message
+
+        }
+
+        rsvps.append(rsvp)
+
+        with open("data/rsvps.json", "w") as file:
+            json.dump(rsvps, file, indent=4)
+
+        flash("Thank you! Your RSVP has been submitted successfully.", "success")
+
+        return redirect("/")
+
+    return render_template("rsvp.html", wedding=selected_wedding)
+
+@app.route("/rsvp-list")
+def rsvp_list():
+
+    with open("data/rsvps.json", "r") as file:
+        rsvps = json.load(file)
+
+    with open("data/weddings.json", "r") as file:
+        weddings = json.load(file)
+
+    for rsvp in rsvps:
+
+        for wedding in weddings:
+
+            if wedding["id"] == rsvp["wedding_id"]:
+
+                rsvp["couple"] = wedding["groom"] + " ❤️ " + wedding["bride"]
+
+                break
+
+    return render_template("rsvp_list.html",
+                           rsvps=rsvps)
 
 if __name__=="__main__":
     app.run(debug=True)

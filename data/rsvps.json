@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "wedding_id": 1,
+        "name": "Esther James",
+        "email": "esther24@gmail.com",
+        "phone": "7902821359",
+        "status": "Attending",
+        "bring_guest": "Yes",
+        "guests": 4,
+        "message": "Couldn't miss this for the world! I am absolutely attending and can\u2019t wait to party with you..."
+    }
+]
