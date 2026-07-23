@@ -117,49 +117,49 @@ http://127.0.0.1:5000
 
 ### Home Page
 
-![Home](screenshots/homepage.png)
+![Home](screenshots/Homepage.png)
 
 ---
 
 ### Admin Login
 
-![Admin Login](screenshots/admin_login.png)
+![Admin Login](screenshots/Admin_login.png)
 
 ---
 
 ### Dashboard
 
-![Dashboard](screenshots/admin_dashboard.png)
+![Dashboard](screenshots/Admin_Dashboard.png)
 
 ---
 
 ### Create Wedding
 
-![Create Wedding](screenshots/wedding_form.png)
+![Create Wedding](screenshots/Wedding_Form.png)
 
 ---
 
 ### Wedding Invitation
 
-![Invitation](screenshots/invitationcard.png)
+![Invitation](screenshots/InvitationCard.png)
 
 ---
 
 ### RSVP Form
 
-![RSVP Form](screenshots/rsvp_form.png)
+![RSVP Form](screenshots/RSVP_Form.png)
 
 ---
 
 ### RSVP List
 
-![RSVP List](screenshots/rsvp_list.png)
+![RSVP List](screenshots/Rsvp_List.png)
 
 ---
 
 ### Summary
 
-![Summary](screenshots/summary.png)
+![Summary](screenshots/Summary.png)
 
 ---
 
