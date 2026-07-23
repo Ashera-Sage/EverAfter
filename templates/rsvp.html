@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
-
 <body>
     <nav class="navbar">
     <div class="logo">
@@ -24,135 +23,51 @@
     </div>
     </nav>
     <div class="invite-body">
-
 <div class="rsvp-card">
-
-    <img src="{{ url_for('static', filename='images/img1.png') }}"
-         class="flower-top">
-
-    <img src="{{ url_for('static', filename='images/img2.png') }}"
-         class="flower-bottom">
-
+    <img src="{{ url_for('static', filename='images/img1.png') }}" class="flower-top">
+    <img src="{{ url_for('static', filename='images/img2.png') }}" class="flower-bottom">
 <div class="rsvp-content">
-
 <h1>RSVP</h1>
-
 <h3>{{ wedding.groom }} ❤️ {{ wedding.bride }}</h3>
-
-<p class="rsvp-text">
-Please let us know if you'll be joining us on our special day.
-</p>
-
+<p class="rsvp-text">Please let us know if you'll be joining us on our special day.</p>
 <form method="POST">
-
 <label>Full Name</label>
-
-<input
-type="text"
-name="name"
-required>
-
+<input type="text" name="name" required>
 <label>Email Address</label>
-
-<input
-type="email"
-name="email"
-required>
-
+<input type="email"name="email" required>
 <label>Phone Number</label>
-
-<input
-type="text"
-name="phone"
-required>
-
+<input type="text" name="phone" required>
 <label>Will you attend?</label>
-
 <div class="radio-group">
-
-<label>
-
-<input
-type="radio"
-name="status"
-value="Attending"
-required>
-
-Happily Accept
-
+<label> 
+    <input type="radio" name="status" value="Attending" required>
+    Happily Accept
 </label>
-
 <label>
-
-<input
-type="radio"
-name="status"
-value="Not Attending">
-
-Regretfully Decline
-
+    <input type="radio" name="status" value="Not Attending">
+    Regretfully Decline
 </label>
-
 </div>
-
 <label>Will you bring guests?</label>
-
 <div class="radio-group">
-
 <label>
-
-<input
-type="radio"
-name="bring_guest"
-value="Yes"
-required>
-
-Yes
-
+    <input type="radio" name="bring_guest" value="Yes" required>
+    Yes
 </label>
-
 <label>
-
-<input
-type="radio"
-name="bring_guest"
-value="No">
-
-No
-
+    <input type="radio" name="bring_guest" value="No"> 
+    No
 </label>
-
 </div>
-
 <label>Total Number of Attendees</label>
-
-<input
-type="number"
-name="guests"
-min="0"
-value="0">
-
+<input type="number" name="guests" min="0" value="0">
 <label>Message for the Couple</label>
-
-<textarea
-name="message"
-rows="5">
+<textarea name="message" rows="5">
 </textarea>
-
-<button
-type="submit"
-class="rsvp-btn">
-
-Submit RSVP
-
-</button>
-
+<button type="submit"class="rsvp-btn">Submit RSVP</button>
 </form>
-
 </div>
-
 </div>
 </div>
 </body>
-
 </html>

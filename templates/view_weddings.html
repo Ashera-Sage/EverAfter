@@ -23,9 +23,8 @@
         <a href="/logout">Logout</a>
     </div>
     </nav>
-    
-    {% for wedding in weddings %}
 
+    {% for wedding in weddings %}
     <div class="wedding-card">
     <h2>{{wedding.groom}}❤️{{wedding.bride}}</h2>
     <p><strong>Date : </strong>{{wedding.date}}</p>
@@ -37,7 +36,6 @@
     <a href="/edit/{{wedding.id}}" class="edit-btn" >Edit</a>
     <a href="/delete/{{ wedding.id }}" class="delete-btn" onclick="return confirm('Are you sure you want to delete this wedding?')">Delete</a>
     </div>
-
     {% endfor %}
 </body>
 </html>

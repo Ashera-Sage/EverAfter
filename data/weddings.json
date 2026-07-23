@@ -20,5 +20,27 @@
         "place": "Banglore",
         "guests": 200,
         "description": "With joyful hearts, we invite you to be a part of our wedding celebration as we begin our new life together..."
+    },
+    {
+        "id": 3,
+        "groom": "Stephan",
+        "bride": "Bella",
+        "date": "2026-09-10",
+        "time": "14:30",
+        "venue": "Green Gardens Park",
+        "place": "Palakad",
+        "guests": 400,
+        "description": "Two hearts, one beautiful journey. Request the honor of your presence as they exchange vows and start a lifetime together..."
+    },
+    {
+        "id": 4,
+        "groom": "Charly",
+        "bride": "Meera",
+        "date": "2026-05-06",
+        "time": "10:00",
+        "venue": "St Xavier's Church",
+        "place": "Thrissur",
+        "guests": 800,
+        "description": "Love brought us together, and faith keeps us strong. We warmly invite you to share in the joy of our wedding celebration..."
     }
 ]

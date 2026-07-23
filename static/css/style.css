@@ -242,32 +242,21 @@ footer{
         DASHBOARD
 ========================== */
 .dashboard-container{
-
     width:90%;
     max-width:1200px;
     margin:50px auto;
     text-align:center;
-
 }
-
 .dashboard-container h1{
-
     color:#070537;
     margin-bottom:15px;
-
 }
-
 .dashboard-cards{
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
     gap:25px;
-
 }
 .dashboard-card{
-
     text-decoration:none;
     color:inherit;
     background:#afc9db;
@@ -275,27 +264,17 @@ footer{
     border-radius:20px;
     padding:30px;
     transition:0.3s;
-
 }
-
 .dashboard-card:hover{
-
     transform:translateY(-5px);
     box-shadow:0 10px 20px rgba(0,0,0,0.1);
-
 }
-
 .dashboard-card h2{
-
     color:#070537;
     margin-bottom:15px;
-
 }
-
 .dashboard-card p{
-
-    color:#333;
-
+    color:black;
 }
 /*-----Create Events form ------*/
 .create-container{
@@ -344,7 +323,6 @@ footer{
 .create-card button:hover{
     background:#0f0c63;
 }
-
 .create-card textarea{
     width:100%;
     padding:14px;
@@ -357,7 +335,6 @@ footer{
     font-family:'Poppins',sans-serif;
     box-sizing:border-box;
 }
-
 .wedding-card{
     background: #afc9db;
     border: 2px solid #070537;
@@ -367,7 +344,6 @@ footer{
     width: 70%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-
 .edit-btn{
     display: inline-block;
     text-decoration: none;
@@ -380,12 +356,10 @@ footer{
     transition: 0.3s;
     margin-right: 8px;
 }
-
 .edit-btn:hover{
     background-color: #070537;
     color: #ffffff;
 }
-
 .delete-btn{
     display: inline-block;
     text-decoration: none;
@@ -397,421 +371,218 @@ footer{
     font-weight: 600;
     transition: 0.3s;
 }
-
 .delete-btn:hover{
     background-color: #b52b27;
 }
-
 /* Invitation Page */
-
 .invite-body{
-
     background:#f8fbfd;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     min-height:100vh;
-
     padding:40px;
-    
-
 }
-
 .invite-card{
-
     position:relative;
-
     overflow:hidden;
-
     width:700px;
-
     max-width:90%;
-
     margin:50px auto;
-
     background:#ffffff;
-
     border-radius:18px;
-
     padding:70px 60px;
-
     border:3px solid #afc9db;
-
     box-shadow:0 15px 40px rgba(0,0,0,.15);
-
     text-align:center;
 }
-
 .invite-card h4{
-
     color:#070537;
-
     letter-spacing:2px;
-
     margin-bottom:20px;
-
 }
-
 .invite-card h1{
-
     font-family:'Great Vibes',cursive;
-
     color:#070537;
-
     font-size:65px;
-
     margin:10px;
-
 }
-
 .invite-card span{
-
     font-size:40px;
-
     color:#afc9db;
-
 }
-
 .invite-text{
-
     margin:30px 0;
-
     font-size:18px;
-
     color:#555;
-
 }
-
 .invite-card hr{
-
     margin:30px 0;
-
 }
-
 .invite-card p{
-
     margin:15px 0;
-
     font-size:18px;
-
 }
-
 .description{
-
     font-style:italic;
-
     color:#666;
-
     margin-top:25px;
-
 }
 .flower-top{
-
     position:absolute;
-
     top:0;
-
     left:0;
-
     width:250px;
-
     z-index:1;
-
     pointer-events:none;
 }
 .flower-bottom{
-
     position:absolute;
-
     bottom:0;
-
     right:0;
-
     width:240px;
-
     z-index:1;
-
     pointer-events:none;
 }
-
 /* RSVP */
-
 .rsvp-card{
-
     position: relative;
     overflow: hidden;
-
     width: 650px;
     max-width: 90%;
-
     margin: 50px auto;
-
     background: #fff;
-
     padding: 45px;
-
     border-radius: 12px;
-
     border: 2px solid #afc9db;
-
     box-shadow: 0 8px 20px rgba(0,0,0,.08);
-
 }
-
 .rsvp-content{
-
     position: relative;
     z-index: 2;
-
 }
-
 .rsvp-card h1{
-
     font-family: 'Great Vibes', cursive;
-
     font-size: 52px;
-
     color: #070537;
-
     text-align: center;
-
     margin-bottom: 10px;
-
 }
-
 .rsvp-card h3{
-
     text-align: center;
-
     color: #070537;
-
     margin-bottom: 8px;
-
 }
-
 .rsvp-text{
-
     text-align: center;
-
     color: #666;
-
     margin-bottom: 30px;
-
     font-size: 15px;
-
 }
-
 .rsvp-card label{
-
     display: block;
-
     margin-top: 18px;
-
     margin-bottom: 6px;
-
     font-weight: 500;
-
     color: #070537;
-
 }
-
 .rsvp-card input[type=text],
 .rsvp-card input[type=email],
 .rsvp-card input[type=number],
 .rsvp-card textarea{
-
     width: 100%;
-
     padding: 10px 12px;
-
     border: 1px solid #d7d7d7;
-
     border-radius: 6px;
-
     font-size: 15px;
-
     font-family: 'Poppins', sans-serif;
-
     box-sizing: border-box;
-
 }
-
 .rsvp-card textarea{
-
     resize: vertical;
-
 }
-
 .radio-group{
-
     display: flex;
-
     gap: 25px;
-
     margin-top: 5px;
-
 }
-
 .radio-group label{
-
     display: flex;
-
     align-items: center;
-
     gap: 6px;
-
     margin: 0;
-
     font-weight: 400;
-
 }
-
 .rsvp-btn{
-
     width: 100%;
-
     margin-top: 30px;
-
     padding: 12px;
-
     border: none;
-
     border-radius: 6px;
-
     background: #070537;
-
     color: white;
-
     font-size: 16px;
-
     cursor: pointer;
-
     transition: .3s;
-
 }
-
 .rsvp-btn:hover{
-
     background: #afc9db;
-
     color: #070537;
-
 }
-
 .table-container{
-
     width:90%;
-
     margin:50px auto;
-
 }
-
 .table-container h2{
-
     text-align:center;
-
     color:#070537;
-
     margin-bottom:30px;
-
 }
-
 table{
-
     width:100%;
-
     border-collapse:collapse;
-
     background:white;
-
     box-shadow:0 5px 15px rgba(0,0,0,.08);
-
 }
-
 th{
-
     background:#070537;
-
     color:white;
-
     padding:15px;
-
 }
-
 td{
-
     padding:15px;
-
     text-align:center;
-
     border-bottom:1px solid #ddd;
-
 }
-
 tr:hover{
-
     background:#f7f9fc;
-
 }
-
 /* SUMMARY */
-
 .table-container{
-
     width:90%;
-
     margin:50px auto;
-
 }
-
 .table-container h2{
-
     text-align:center;
-
     color:#070537;
-
     margin-bottom:25px;
-
 }
-
 table{
-
     width:100%;
-
     border-collapse:collapse;
-
     background:#fff;
-
     box-shadow:0 5px 15px rgba(0,0,0,.08);
-
 }
-
 th{
-
     background:#070537;
-
     color:#fff;
-
     padding:15px;
-
 }
-
 td{
-
     padding:14px;
-
     text-align:center;
-
     border-bottom:1px solid #ddd;
-
 }
-
 tr:hover{
-
     background:#f8f9fc;
-
 }

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <title>RSVP List</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/style.css') }}">
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<!--CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
-
 <body>
     <nav class="navbar">
     <div class="logo">
@@ -17,54 +18,31 @@
     </div>
     <div class="nav-links">
         <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
     </div>
     </nav>
 <div class="table-container">
-
 <h2>RSVP List</h2>
-
 <table>
-
 <tr>
-
 <th>Couple</th>
-
 <th>Name</th>
-
 <th>Email</th>
-
 <th>Phone</th>
-
 <th>Status</th>
-
 <th>Guests</th>
-
 </tr>
-
 {% for rsvp in rsvps %}
-
 <tr>
-
 <td>{{ rsvp.couple }}</td>
-
 <td>{{ rsvp.name }}</td>
-
 <td>{{ rsvp.email }}</td>
-
 <td>{{ rsvp.phone }}</td>
-
 <td>{{ rsvp.status }}</td>
-
 <td>{{ rsvp.guests }}</td>
-
 </tr>
-
 {% endfor %}
-
 </table>
-
 </div>
-
 </body>
-
 </html>

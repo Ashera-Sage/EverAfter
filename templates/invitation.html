@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Wedding Invitation</title>
 
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
-
 <body >
-        <nav class="navbar">
+    <nav class="navbar">
     <div class="logo">
         <h2>EverAfter</h2>
     </div>
@@ -30,54 +21,27 @@
         <a href="/">Home</a>
     </div>
     </nav>
-<div class="invite-body">
-
-<div class="invite-card">
-    <img src="{{ url_for('static', filename='images/img1.png') }}"
-         class="flower-top">
-
-
+    <div class="invite-body">
+    <div class="invite-card">
+    <img src="{{ url_for('static', filename='images/img1.png') }}" class="flower-top">
+    <img src="{{ url_for('static', filename='images/img2.png') }}" class="flower-bottom">
     <h4>Together With Their Families</h4>
-
     <h1>{{ wedding.groom }}</h1>
-
     <span>&</span>
-
     <h1>{{ wedding.bride }}</h1>
-
     <p class="invite-text">
-
         Request the pleasure of your gracious presence
         at their wedding ceremony.
-
     </p>
-
     <hr>
-
     <p><strong>📅 Date:</strong> {{ wedding.date }}</p>
-
     <p><strong>🕒 Time:</strong> {{ wedding.time }}</p>
-
     <p><strong>📍 Venue:</strong> {{ wedding.venue }}</p>
-
     <p><strong>📌 Place:</strong> {{ wedding.place }}</p>
-
-    <p class="description">
-
-        {{ wedding.description }}
-
-    </p>
-
-    <a href="/rsvp/{{ wedding.id }}" class="hero-btn">
-
-        RSVP NOW
-
-    </a>
-    <img src="{{ url_for('static', filename='images/img2.png') }}"
-         class="flower-bottom">
-
-</div>
-</div>
+    <p class="description">{{ wedding.description }}</p>
+    <a href="/rsvp/{{ wedding.id }}" class="hero-btn">RSVP NOW</a>
+    
+    </div>
+    </div>
 </body>
-
 </html>

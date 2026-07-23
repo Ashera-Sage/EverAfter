@@ -44,42 +44,40 @@
         <h2>Upcoming Weddings</h2>
         {% if upcoming %}
         <div class="card-container">
-            {% for wedding in upcoming %}
-    <div class="wedding-card">
+        {% for wedding in upcoming %}
+        <div class="wedding-card">
         <h3>{{ wedding.groom }} ❤️ {{ wedding.bride }}</h3>
         <p>{{ wedding.date }}</p>
-        <a href="/invitation/{{ wedding.id }}" class="hero-btn">
-            View Invitation
-        </a>
-    </div>
-    {% endfor %}
-</div>
-{% else %}
-<div class="empty-box">
-    <h3>No Upcoming Weddings</h3>
-    <p>Wedding cards will appear here after the Admin creates a wedding.</p>
-</div>
-{% endif %}
+        <a href="/invitation/{{ wedding.id }}" class="hero-btn">View Invitation</a>
+        </div>
+        {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-box">
+        <h3>No Upcoming Weddings</h3>
+        <p>Wedding cards will appear here after the Admin creates a wedding.</p>
+        </div>
+        {% endif %}
     </section>
     <!-- ================= COMPLETED ================= -->
     <section class="section">
         <h2>Completed Weddings</h2>
         {% if completed %}
-<div class="card-container">
-    {% for wedding in completed %}
-    <div class="wedding-card">
+        <div class="card-container">
+        {% for wedding in completed %}
+        <div class="wedding-card">
         <h3>{{ wedding.groom }} ❤️ {{ wedding.bride }}</h3>
         <p>{{ wedding.date }}</p>
         <a href="/invitation/{{ wedding.id }}" class="hero-btn">View Invitation</a>
-    </div>
-    {% endfor %}
-</div>
-{% else %}
-<div class="empty-box">
-    <h3>No Completed Weddings</h3>
-    <p>Completed wedding events will appear here.</p>
-</div>
-{% endif %}
+        </div>
+        {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-box">
+        <h3>No Completed Weddings</h3>
+        <p>Completed wedding events will appear here.</p>
+        </div>
+        {% endif %}
     </section>
     <!-- ================= FOOTER ================= -->
     <footer>

@@ -8,5 +8,15 @@
         "bring_guest": "Yes",
         "guests": 4,
         "message": "Couldn't miss this for the world! I am absolutely attending and can\u2019t wait to party with you..."
+    },
+    {
+        "wedding_id": 3,
+        "name": "Crystal Jacob",
+        "email": "cryz@123gmail.com",
+        "phone": "8289973964",
+        "status": "Attending",
+        "bring_guest": "Yes",
+        "guests": 2,
+        "message": "Can't wait to celebrate this unforgettable day with family and friends."
     }
 ]

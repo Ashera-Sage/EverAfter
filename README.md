@@ -1,8 +1,8 @@
-# EverAfter – Wedding Planner & RSVP Management System
+# EverAfter – Wedding Events & RSVP Management System
 
 ## Project Overview
 
-EverAfter is a Flask-based Wedding Planner and RSVP Management System developed as a mini project. It helps administrators create and manage wedding events while allowing guests to view wedding invitations and submit their RSVP responses. The application uses JSON files for data storage instead of a database.
+EverAfter is a Flask-based Wedding Events and RSVP Management System developed as a mini project. It helps administrators create and manage wedding events while allowing guests to view wedding invitations and submit their RSVP responses. The application uses JSON files for data storage instead of a database.
 
 ---
 
@@ -150,5 +150,3 @@ http://127.0.0.1:5000
 ## Developed By
 
 **Ashera Sage**
-
-MCA Graduate

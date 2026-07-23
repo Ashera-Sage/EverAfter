@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summary</title>
-
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<!--CSS-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -14,50 +18,29 @@
     </div>
     <div class="nav-links">
         <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
     </div>
     </nav>
 <div class="table-container">
-
 <h2>Wedding Summary</h2>
-
 <table>
-
 <tr>
-
     <th>Couple</th>
-
-    <th>Guests</th>
-
+    <th>Total Available Seats</th>
     <th>Registered</th>
-
     <th>Seats Left</th>
-
     <th>Status</th>
-
 </tr>
-
 {% for item in summary_data %}
-
 <tr>
-
     <td>{{ item.couple }}</td>
-
     <td>{{ item.capacity }}</td>
-
     <td>{{ item.registered }}</td>
-
     <td>{{ item.seats_left }}</td>
-
     <td>{{ item.status }}</td>
-
 </tr>
-
 {% endfor %}
-
 </table>
-
 </div>
-
 </body>
-
 </html>
