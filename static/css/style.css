@@ -1,7 +1,3 @@
-/* ===========================
-        RESET
-=========================== */
-
 *{
     margin:0;
     padding:0;
@@ -11,319 +7,169 @@ html{
     scroll-behavior: smooth;
 }
 body{
-
     font-family:'Poppins',sans-serif;
-
     background:#F7F5F2;
-
     color:#070537;
-
 }
-
-
 /* ===========================
         NAVBAR
 =========================== */
-
 .navbar{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     padding:20px 70px;
-
     background:white;
-
     border-top:8px solid #070537;
-
     border-bottom:8px solid #070537;
-
 }
-
 .logo h2{
-
     font-family:'Great Vibes',cursive;
-
     font-size:50px;
-
     color:#070537;
-
 }
-
 .nav-links a{
-
     text-decoration:none;
-
     color:#070537;
-
     margin-left:35px;
-
     font-weight:600;
-
     transition:.3s;
-
 }
-
 .nav-links a:hover{
-
     color:#5c5a8d;
-
 }
-
-
 /* ===========================
         HERO
 =========================== */
-
 .hero{
-
     position:relative;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     min-height:85vh;
-
     padding:60px;
-
     overflow:hidden;
-
 }
-
 .hero-content{
-
     max-width:850px;
-
     background:#afc9db;
-
     border:2px solid #070537;
-
     border-radius:25px;
-
     padding:70px;
-
     text-align:center;
-
     box-shadow:0 10px 30px rgba(0,0,0,.08);
-
 }
-
 .hero h1{
-
     font-family:'Great Vibes',cursive;
-
     font-size:90px;
-
     color:#070537;
-
     margin-bottom:25px;
-
 }
-
 .hero p{
-
     color:#070537;
-
     font-size:20px;
-
     line-height:1.9;
-
     margin-bottom:40px;
-
 }
-
 .hero-btn{
-
     display:inline-block;
-
     text-decoration:none;
-
     background:#070537;
-
     color:#afc9db;
-
     padding:14px 35px;
-
     border-radius:40px;
-
     border:2px solid #070537;
-
     transition:.3s;
-
 }
-
 .hero-btn:hover{
-
     background:#afc9db;
-
     color:#070537;
-
 }
-
-
 /* ===========================
       FLORAL IMAGES
 =========================== */
-
 .flower{
-
     position:absolute;
-
     width:300px;
-
 }
-
 .flower-left{
-
     top:0;
-
     left:0;
-
 }
-
 .flower-right{
-
     bottom:0;
-
     right:0;
-
 }
-
-
 /* ===========================
         SECTION
 =========================== */
-
 .section{
-
     width:90%;
-
     margin:80px auto;
-
 }
-
 .section h2{
-
     text-align:center;
-
     color:#070537;
-
     font-family:'Cormorant Garamond',serif;
-
     font-size:45px;
-
     margin-bottom:40px;
-
 }
-
-
 /* ===========================
       EMPTY BOX
 =========================== */
-
 .empty-box{
-
     background:#afc9db;
-
     border:2px solid #070537;
-
     border-radius:25px;
-
     padding:45px;
-
     text-align:center;
-
 }
-
 .empty-box h3{
-
     font-family:'Cormorant Garamond',serif;
-
     font-size:34px;
-
     color:#070537;
-
     margin-bottom:15px;
-
 }
-
 .empty-box p{
-
     color:#070537;
-
 }
-
-
 /* ===========================
         FOOTER
 =========================== */
-
 footer{
-
     margin-top:70px;
-
     background:#070537;
-
     color:#afc9db;
-
     padding:25px;
-
     text-align:center;
-
 }
-
-
 /* ===========================
       RESPONSIVE
 =========================== */
-
 @media(max-width:768px){
 .navbar{
-
     flex-direction:column;
-
     gap:15px;
-
 }
 .hero{
-
     padding:20px;
-
 }
 .hero-content{
-
     padding:35px;
-
 }
 .hero h1{
-
     font-size:60px;
-
 }
 .hero p{
-
     font-size:17px;
-
 }
 .flower{
-
     width:140px;
-
 }
 }
-/* ===========================
-      LOGIN PAGE
-=========================== */
 /* ==========================
         LOGIN PAGE
 ========================== */
-
 .login-container{
     min-height:90vh;
     display:flex;
@@ -375,45 +221,26 @@ footer{
 .login-card button:hover{
     background:#0f0c63;
 }
-
 /* Flash Messages */
-
 .flash{
-
     padding:12px;
-
     border-radius:10px;
-
     margin-bottom:20px;
-
     font-weight:600;
-
 }
-
 .flash.success{
-
     background:#d4edda;
-
     color:#155724;
-
     border:1px solid #28a745;
-
 }
-
 .flash.error{
-
     background:#f8d7da;
-
     color:#721c24;
-
     border:1px solid #dc3545;
-
 }
-
 /* ==========================
         DASHBOARD
 ========================== */
-
 .dashboard-container{
 
     width:90%;
@@ -928,5 +755,63 @@ td{
 tr:hover{
 
     background:#f7f9fc;
+
+}
+
+/* SUMMARY */
+
+.table-container{
+
+    width:90%;
+
+    margin:50px auto;
+
+}
+
+.table-container h2{
+
+    text-align:center;
+
+    color:#070537;
+
+    margin-bottom:25px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+th{
+
+    background:#070537;
+
+    color:#fff;
+
+    padding:15px;
+
+}
+
+td{
+
+    padding:14px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+tr:hover{
+
+    background:#f8f9fc;
 
 }
