@@ -113,6 +113,54 @@ python app.py
 http://127.0.0.1:5000
 ```
 
+## Screenshots
+
+### Home Page
+
+![Home](screenshots/homepage.png)
+
+---
+
+### Admin Login
+
+![Admin Login](screenshots/admin_login.png)
+
+---
+
+### Dashboard
+
+![Dashboard](screenshots/admin_dashboard.png)
+
+---
+
+### Create Wedding
+
+![Create Wedding](screenshots/wedding_form.png)
+
+---
+
+### Wedding Invitation
+
+![Invitation](screenshots/invitationcard.png)
+
+---
+
+### RSVP Form
+
+![RSVP Form](screenshots/rsvp_form.png)
+
+---
+
+### RSVP List
+
+![RSVP List](screenshots/rsvp_list.png)
+
+---
+
+### Summary
+
+![Summary](screenshots/summary.png)
+
 ---
 
 ## Admin Login
